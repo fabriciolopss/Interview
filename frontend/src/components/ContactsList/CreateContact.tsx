@@ -9,9 +9,10 @@ import { useAlertContext } from "../../contexts/AlertContext";
 
 type Props = {
   setOpen: (open: boolean) => void;
+  loadContacts: () => void;
 };
 
-function CreateContact({ setOpen }: Props) {
+function CreateContact({ setOpen, loadContacts }: Props) {
   const [newCreateContact, setNewCreateContact] =
     React.useState<createContactType>({
       name: "",
@@ -71,6 +72,7 @@ function CreateContact({ setOpen }: Props) {
             try {
               await createContact(newCreateContact);
               setOpen(false);
+              loadContacts();
               triggerAlert({
                 message: "Contact created successfully",
                 severity: "success",

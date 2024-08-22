@@ -24,16 +24,18 @@ function ContactsList() {
 
   const { setContacts, contacts } = useContactsContext();
 
+  const loadContacts = async () => {
+    const response = await fetchContacts();
+    setContacts(response);
+  };
+
   const steps: { [title: string]: React.ReactNode } = {
-    "Create a freelancer profile": <CreateContact setOpen={setOpenModal} />,
+    "Create a freelancer profile": (
+      <CreateContact setOpen={setOpenModal} loadContacts={loadContacts} />
+    ),
   };
 
   React.useEffect(() => {
-    const loadContacts = async () => {
-      const response = await fetchContacts();
-      setContacts(response);
-    };
-
     loadContacts();
   }, []);
 
