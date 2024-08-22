@@ -1,0 +1,21 @@
+.textArea {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  resize: vertical;
+  &:focus-visible {
+    outline: none;
+  }
+  &::-webkit-resizer {
+    display: none;
+  }
+}
+
+.textAreaWrapper {
+  padding: 16px;
+  border-radius: 20px;
+  background-color: #f6f6fa;
+}

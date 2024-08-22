@@ -1,0 +1,89 @@
+.backgroundWrapper {
+  position: absolute;
+  top: calc(50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9;
+  animation: appearbackground 1s ease;
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: fit-content;
+  max-height: 1000px;
+  background-color: white;
+  z-index: 10;
+  animation: appearModal 1.5s ease;
+  transition: max-height 0.5s ease;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.modalHeader {
+  background-color: #f7f9fd;
+  width: calc(100% - 48px);
+  padding: 24px;
+}
+
+.headerTitle {
+  font-weight: 600;
+  font-size: 24px;
+  color: black;
+}
+
+.stepIndicator {
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(124, 124, 124);
+}
+
+.modalBody {
+  padding: 32px;
+}
+
+@keyframes appearbackground {
+  0% {
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+  }
+  50% {
+    width: 100vh;
+    height: 100vh;
+    border-radius: 50%;
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0%;
+  }
+}
+
+@keyframes appearModal {
+  0% {
+    opacity: 0;
+    top: 150%;
+  }
+  50% {
+    opacity: 0;
+    top: 150%;
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+.modalFooter {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  width: calc(100% - 48px);
+  padding: 12px 24px;
+  display: flex;
+}

@@ -1,0 +1,49 @@
+.Primary {
+  background-color: #266aed;
+  color: white;
+  width: 100%;
+  padding: 16px 0px;
+  border-radius: 30px;
+  cursor: pointer;
+  &:hover {
+    background-color: #1e4b8f;
+    transition: 0.5s;
+  }
+}
+
+.secondary {
+  background-color: white;
+  color: #266aed;
+  width: 100%;
+  padding: 16px 0px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 1px solid #266aed;
+  &:hover {
+    background-color: #1e4b8f;
+    color: white;
+    transition: 0.5s;
+  }
+}
+
+.blue-first {
+  color: white;
+  background-color: #1756c5;
+  transition: 0.5s ease;
+  height: 30px !important;
+  padding: 8px;
+  &:hover {
+    background-color: #386bc4;
+  }
+}
+
+.blue-second {
+  color: #1756c5;
+  background-color: #ebf1f9;
+  transition: 0.5s ease;
+  height: 30px !important;
+  padding: 8px;
+  &:hover {
+    background-color: #d9e3f5;
+  }
+}
